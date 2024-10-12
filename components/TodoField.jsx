@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const InputField = ({ addTodo }) => {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -10,18 +10,18 @@ const InputField = ({ addTodo }) => {
   const handleAdd = () => {
     if (input.trim()) {
       addTodo(input);
-      setInput('');
+      setInput("");
     }
   };
 
   return (
     <div>
       <input
-        type="text"
+        type='text'
         value={input}
         onChange={handleChange}
-        placeholder="Add a new todo..."
-        aria-label="New Todo"
+        placeholder='Add a new todo...'
+        aria-label='New Todo'
       />
       <button onClick={handleAdd}>Add</button>
     </div>
